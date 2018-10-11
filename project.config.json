@@ -7,7 +7,8 @@
 		"minified": true,
 		"newFeature": true
 	},
-	"miniprogramRoot": "./dist/",
+	"miniprogramRoot": "./miniprogram/",
+	"cloudfunctionRoot": "./cloudfunctions/",
 	"compileType": "miniprogram",
 	"appid": "wx8a16576434b8d269",
 	"projectname": "mp-practice",

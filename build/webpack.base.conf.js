@@ -67,7 +67,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        include: [resolve('src'), resolve('test'), resolve('static/iview'), resolve('static/wux')],
+        include: [resolve('src'), resolve('test'), resolve('miniprogram/static/iview'), resolve('miniprogram/static/wux')],
         use: [
           'babel-loader',
           {
@@ -115,7 +115,21 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
-        to: path.resolve(__dirname, '../dist/static'),
+        to: path.resolve(__dirname, '../dist/miniprogram/static'),
+        ignore: ['.*']
+      }
+    ]),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../project.config.json'),
+        to: path.resolve(__dirname, '../dist/project.config.json'),
+        ignore: ['.*']
+      }
+    ]),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../cloudfunctions'),
+        to: path.resolve(__dirname, '../dist/cloudfunctions'),
         ignore: ['.*']
       }
     ])
