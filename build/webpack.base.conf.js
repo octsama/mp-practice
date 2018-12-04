@@ -67,7 +67,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        include: [resolve('src'), resolve('test'), resolve('miniprogram/static/iview'), resolve('miniprogram/static/wux')],
+        include: [resolve('src'), resolve('test'), resolve('miniprogram/static/vant'), resolve('miniprogram/static/wux')],
         use: [
           'babel-loader',
           {

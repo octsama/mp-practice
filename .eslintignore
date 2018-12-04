@@ -1,4 +1,4 @@
 build/*.js
 config/*.js
-static/iview/*/*.js
+static/vant/*/*.js
 static/wux/*/*.js
